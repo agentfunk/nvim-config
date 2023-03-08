@@ -84,5 +84,9 @@
   ;; Clojure
   (lsp.clojure_lsp.setup {: on_attach : handlers : capabilities})
   (lsp.sumneko_lua.setup {:cmd [:lua-language-server]
-                          :settings {:Lua {:telemetry {:enable false}}}}))
+                          :settings {:Lua {:telemetry {:enable false}}}})
+  (lsp.pyright.setup {:cmd [:pyright-langserver :--stdio]
+                      : handlers
+                      : on_attach
+                      : capabilities}))
 
